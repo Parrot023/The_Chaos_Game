@@ -53,21 +53,14 @@ function reset() {
 
   background(backgroundColor);
 
-  //create start dots/points
-  // points = [];
-  // for (var i=0; i<number_of_dots; i++) {
-  //   a = createVector(random(width), random(height));
-  //   points.push(a);
-  // }
-
-  //creates start dots around circle
+  //reseting points
+  points = [];
   for (let i = 0; i <number_of_dots; i++) {
-   let angle = i * TWO_PI / number_of_dots;
-   let a = p5.Vector.fromAngle(angle);
-   a.mult(width / 2);
-   a.add(width / 2, height / 2);
+   let a = createVector(random(width), random(height));
    points.push(a);
   }
+  console.log(points);
+
 
   //draw start points/dots
   stroke(dotColor);
